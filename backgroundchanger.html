@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body {
+            background-color: #c0c7ba;
+        }
+
+        .changer {
+            display: flex;
+            margin-right: 35px;
+            justify-content: end;
+            /* isko right me text-align: right se b kr skte h */
+
+        }
+
+        .shape {
+            border-radius: 50%;
+            border: 1px solid rgb(0, 0, 0);
+            margin: 3px;
+            padding: 15px;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+
+        #white {
+            background-color: #ffffff;
+
+        }
+
+        #green {
+            background-color: #adff2f;
+        }
+
+        #red {
+            background-color: #ff0000;
+        }
+
+        #black {
+            background-color: #000000;
+            border: 1px solid white
+        }
+
+        h1 {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: 38px;
+            text-decoration: underline;
+        }
+
+        .img {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+
+        }
+
+        img {
+            border-radius: 25px;
+            width: 40%;
+
+        }
+
+        p {
+            font-size: 25px;
+            margin: 0px 50px;
+            margin-top: 5px;
+            text-align: justify;
+
+        }
+
+        footer {
+            font-size: 18px;
+            font-weight: 400;
+            background-color: #e76c6c;
+            text-align: center;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="changer">
+        <span id="white" class="shape" onclick="changeBG('#ffffff')"> </span>
+        <span id="green" class="shape" onclick="changeBG('#adff2f')"> </span>
+        <span id="red" class="shape" onclick="changeBG('#ff0000')"></span>
+        <span id="black" class="shape" onclick="changeBG('#000000')"> </span>
+    </div>
+    <h1 class="text">Web Devlopers</h1>
+    <div class="img">
+        <img src="download.jpg" alt="">
+    </div>
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos quidem maiores reprehenderit error consequuntur
+        iusto totam nesciunt dolor, modi voluptas dicta debitis consectetur laudantium officiis alias aperiam molestiae
+        cum, repellat vel aut facilis sequi minima nemo. Sequi natus tempora repellendus consectetur quia ipsam earum,
+        magnam officia omnis tenetur neque sint, consequuntur accusamus iusto molestias saepe? Molestias delectus
+        eligendi similique nulla ipsum possimus error repellat ex aut molestiae dolorum pariatur maxime amet ad animi
+        tempora nostrum officia ratione maiores, omnis tempore, facere obcaecati ab? Tempore perspiciatis magnam
+        praesentium inventore eveniet, illo, cumque in recusandae quisquam necessitatibus similique culpa consequatur
+        accusantium labore odit dolore doloremque officia voluptas sapiente eaque sint iusto eligendi deleniti sit.
+        Nostrum voluptates iste incidunt dolor ratione enim doloremque nulla molestias, harum modi voluptas, optio, cum
+        velit temporibus hic? Aut est, distinctio dolores fugit doloremque asperiores. Inventore veritatis labore
+        blanditiis? Delectus explicabo suscipit rem veritatis error, animi facilis laborum eos corrupti et! Voluptatum
+        fugit ipsa temporibus nesciunt ipsum amet similique voluptas architecto animi impedit eum, aliquid distinctio
+        sunt debitis perferendis autem aut corrupti dolorem voluptatem. Cupiditate quia odio dignissimos sunt cumque ex,
+        rerum exercitationem consectetur cum, soluta, facere inventore temporibus? Perspiciatis alias fuga perferendis
+        illo? Molestias, laboriosam ipsa! Asperiores saepe delectus at corporis animi, blanditiis est quis cum
+        dignissimos ullam praesentium. Ipsam minima alias nobis possimus facilis reprehenderit eaque, provident nesciunt
+        distinctio? Vitae deleniti aliquid voluptatem ipsam quo nisi inventore a doloribus magnam repudiandae asperiores
+        sit hic eaque nemo repellat odio itaque soluta accusantium nam dolores, cumque ipsa? Neque voluptatum ab
+        officia? Error facilis blanditiis veritatis ducimus porro similique quibusdam sequi soluta minus eveniet. Neque
+        sapiente cumque libero corrupti alias itaque vel nulla id, eveniet maiores tempora doloribus ducimus ipsa aut
+        quam voluptate. Quae quo perspiciatis consequatur est ut consequuntur sequi sunt rem! Animi, dolorem! Voluptate,
+        inventore quos! Quidem amet doloremque eaque quibusdam sapiente aut expedita exercitationem natus deserunt.
+        Impedit dolores sint aliquam earum cum. Autem quia aliquam excepturi consectetur harum praesentium eveniet eum
+        cupiditate commodi ad itaque officiis porro enim distinctio laudantium neque ea perferendis a, omnis optio.
+        Reiciendis quaerat vel quisquam molestias. Pariatur odio porro, non eligendi quam minima obcaecati nesciunt eum
+        accusamus dicta laudantium at repudiandae perspiciatis reiciendis deserunt ut voluptatibus beatae iste aliquid
+        incidunt architecto reprehenderit. Nisi corrupti earum inventore quam praesentium dolores beatae quis doloribus
+        repellat consequatur repellendus, pariatur obcaecati hic odit dolorum ex itaque ipsa! Excepturi aut modi
+        nesciunt eos maxime numquam impedit.
+    </p>
+    <footer>Created by Praveen Patidar</footer>
+    <script>
+        function changeBG(color) {
+            document.body.style.backgroundColor = color;
+            let txt = document.getElementsByClassName("text");
+            if (color == '#000000') {
+                for (let elm of txt) {
+                    elm.style.color = "white";
+
+                }
+            }
+            else {
+                for (let elm of txt) {
+                    elm.style.color = "black";
+
+                }
+
+            };
+
+
+
+        };
+
+    </script>
+</body>
+
+</html>
